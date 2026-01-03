@@ -1,0 +1,36 @@
+<div class="container-fluid vh-100 d-flex flex-column justify-content-start align-items-center bg-gradient">
+    <h1 class="mt-5 mb-5 fw-bold title-text">{{ title }}</h1>
+
+    @if (successMessage) {
+    <div class="alert alert-success w-100 text-center mt-3">
+        {{ successMessage }}
+    </div>
+    }
+
+    <table class="table table-striped w-75">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (c of categories; track c.id) {
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.name }}</td>
+                <td>{{ c.description }}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="onDelete(c.id)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>

@@ -1,0 +1,20 @@
+<div class="container-fluid d-flex flex-column justify-content-start align-items-center bg-gradient">
+    <h1 class=" mt-5 mb-5 fw-bold title-text">{{ title }} </h1>
+    <div class="row justify-content-center w-75">
+        @for(c of categories; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow">
+
+                <img [src]="c.imagePath" class="card-img-top mt-2 mx-auto d-block" alt=`{{ c.name }}`
+                    [style.width.px]="IMG_WIDTH" [style.height.px]="IMG_HEIGHT" style="object-fit:cover;" />
+
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">{{ c.id }}. {{ c.name }}</h5>
+                    <p class="card-text text-muted">{{ c.description }}</p>
+                </div>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>

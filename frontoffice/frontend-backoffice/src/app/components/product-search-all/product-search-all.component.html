@@ -1,0 +1,55 @@
+<!-- <div class="container-fluid d-flex flex-column justify-content-start align-items-center bg-gradient">
+    <h1 class="mt-5 mb-5 fw-bold title-text">{{ title }}</h1>
+
+    <div class="row justify-content-center w-75">
+        @for(p of products; track $index) {
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow">
+
+                <img [src]="p.imagePath" class="card-img-top mt-2 mx-auto d-block" alt=`{{ p.name }}`
+                    [style.width.px]="IMG_WIDTH" [style.height.px]="IMG_HEIGHT" />
+
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">{{ p.name }}</h5>
+                    <p class="card-text text-muted">{{ p.description }}</p>
+
+                    <p class="card-text">
+                        <span class="fw-bold">Category:</span> {{ p.category.name }}
+                    </p>   
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div> -->
+<div class="container-fluid d-flex flex-column justify-content-start align-items-center bg-gradient">
+  <h1 class="mt-5 mb-5 fw-bold title-text">{{ title }}</h1>
+
+  <div class="w-75">
+    @for(group of groupedProducts; track $index) {
+      <div class="mb-5">
+        <!-- Titolo categoria -->
+        <h2 class="fw-bold text-danger mb-4">{{ group.category }}</h2>
+
+        <div class="row justify-content-center">
+          @for(p of group.products; track $index) {
+            <div class="col-md-3 mb-4">
+              <div class="card h-100 shadow">
+                <img [src]="p.imagePath"
+                     class="card-img-top mt-2 mx-auto d-block"
+                     alt="{{ p.name }}"
+                     [style.width.px]="IMG_WIDTH"
+                     [style.height.px]="IMG_HEIGHT" />
+
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">{{ p.name }}</h5>
+                  <p class="card-text text-muted">{{ p.description }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

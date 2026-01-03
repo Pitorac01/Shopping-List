@@ -1,0 +1,23 @@
+.navbar a {
+  cursor: pointer;
+}
+
+.navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.dropdown-item {
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

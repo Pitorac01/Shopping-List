@@ -1,0 +1,9 @@
+/* Sfondo gradiente per tutta la pagina */
+.container-fluid {
+    background: linear-gradient(to right, #3195ff, #62c3f3);
+}
+
+/* Box centrale */
+.text-center {
+    max-width: 700px;
+}

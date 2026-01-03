@@ -1,0 +1,19 @@
+.title-text {
+  font-size: 3.5rem;
+  color: #000000;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-category {
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: bold;
+}
